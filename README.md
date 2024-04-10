@@ -1,6 +1,5 @@
 # 0x00. ES6 Basics
-### JavaScript
-### ES6
+### JavaScript ES6
 
 # Resources
 [ES6 Basics](https://intranet.alxswe.com/projects/1224)
