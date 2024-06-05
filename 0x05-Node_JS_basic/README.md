@@ -159,9 +159,11 @@ const displayMessage = require('./0-console');
 
 displayMessage("Hello NodeJS!");
 
+~~~
 bob@dylan:~$ node 0-main.js
 Hello NodeJS!
-bob@dylan:~$
+bob@dylan:~$~
+~~~
  
 #### 1. Using Process stdin
 ##### Create a program named 1-stdin.js that will be executed through command line:
@@ -276,12 +278,12 @@ In a file named 4-http.js, create a small HTTP server using the http module:
  - HTTP server should listen on port 1245
  - Displays Hello Holberton School! in the page body for any endpoint as plain text
 
-In terminal 1:
+#### In terminal 1:
 
 bob@dylan:~$ node 4-http.js
 ...
 
-In terminal 2:
+#### In terminal 2:
 
 bob@dylan:~$ curl localhost:1245 && echo ""
 Hello Holberton School!
@@ -300,12 +302,12 @@ In a file named 5-http.js, create a small HTTP server using the http module:
  - When the URL path is /students, it should display This is the list of our students followed by the same content as    the file 3-read_file_async.js (with and without the database) - the name of the database must be passed as    argument of the file
  - CSV file can contain empty lines (at the end) - and they are not a valid student!
 
-Terminal 1:
+#### Terminal 1:
 
 bob@dylan:~$ node 5-http.js database.csv
 ...
 
-In terminal 2:
+#### In terminal 2:
 
 bob@dylan:~$ curl localhost:1245 && echo ""
 Hello Holberton School!
@@ -324,12 +326,12 @@ Install Express and in a file named 6-http_express.js, create a small HTTP serve
  - HTTP server should listen on port 1245
  - Displays Hello Holberton School! in the page body for the endpoint /
 
-In terminal 1:
+#### In terminal 1:
 
 bob@dylan:~$ node 6-http_express.js
 ...
 
-In terminal 2:
+#### In terminal 2:
 
 bob@dylan:~$ curl localhost:1245 && echo ""
 Hello Holberton School!
@@ -357,12 +359,12 @@ In a file named 7-http_express.js, recreate the small HTTP server using Express:
  - When the URL path is /students, it should display This is the list of our students followed by the same content as    the file 3-read_file_async.js (with and without the database) - the name of the database must be passed as    argument of the file
  - CSV file can contain empty lines (at the end) - and they are not a valid student!
 
-Terminal 1:
+#### Terminal 1:
 
 bob@dylan:~$ node 7-http_express.js database.csv
 ...
 
-In terminal 2:
+#### In terminal 2:
 
 bob@dylan:~$ curl localhost:1245 && echo ""
 Hello Holberton School!
@@ -435,12 +437,12 @@ If you are starting node from outside of the folder full_server, you will have t
 - Don’t forget to export your express app at the end of server.js (export default app;)
 - The database filename is passed as argument of the server.js BUT, for testing purpose, you should retrieve this filename at the execution (when getAllStudents or getAllStudentsByMajor are called for example)
 
-In terminal 1:
+#### In terminal 1:
 
 bob@dylan:~$ npm run dev
 ...
 
-In terminal 2:
+#### In terminal 2:
 
 bob@dylan:~$ curl localhost:1245 && echo ""
 Hello Holberton School!
