@@ -41,6 +41,7 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 
 ## database.csv
 
+```
 firstname,lastname,age,field
 Johann,Kerbrou,30,CS
 Guillaume,Salou,30,SWE
@@ -52,10 +53,12 @@ Joseph,Crisou,34,SWE
 Paul,Schneider,60,SWE
 Tommy,Schoul,32,SWE
 Katie,Shirou,21,CS
+```
 
 ## package.json
 Click to show/hide file contents
 
+```
 {
   "name": "node_js_basics",
   "version": "1.0.0",
@@ -87,10 +90,12 @@ Click to show/hide file contents
     "sinon": "^7.5.0"
   }
 }
+```
 
 ## babel.config.js
 Click to show/hide file contents
 
+```
 module.exports = {
   presets: [
     [
@@ -103,6 +108,7 @@ module.exports = {
     ],
   ],
 };
+```
 
 
 ## .eslintrc.js
@@ -179,6 +185,7 @@ bob@dylan:~$~
 
  - Your code will be tested through a child process, make sure you have everything you need for that
 
+~~~
 bob@dylan:~$ node 1-stdin.js 
 Welcome to Holberton School, what is your name?
 Bob
@@ -188,7 +195,8 @@ bob@dylan:~$ echo "John" | node 1-stdin.js
 Welcome to Holberton School, what is your name?
 Your name is: John
 This important software is now closing
-bob@dylan:~$ 
+bob@dylan:~$
+~~~ 
  
 #### 2. Reading a file synchronously with Node JS
 Using the database database.csv (provided in project description), create a function countStudents in the file 2-read_file.js
@@ -200,6 +208,7 @@ Using the database database.csv (provided in project description), create a func
  - It should log the number of students in each field, and the list with the following format: Number of students in     FIELD: 6. List: LIST_OF_FIRSTNAMES
  - CSV file can contain empty lines (at the end) - and they are not a valid student!
 
+```
 bob@dylan:~$ cat 2-main_0.js
 const countStudents = require('./2-read_file');
 
@@ -222,7 +231,8 @@ bob@dylan:~$ node 2-main_1.js
 Number of students: 10
 Number of students in CS: 6. List: Johann, Arielle, Jonathan, Emmanuel, Guillaume, Katie
 Number of students in SWE: 4. List: Guillaume, Joseph, Paul, Tommy
-bob@dylan:~$ 
+bob@dylan:~$
+```
  
 #### 3. Reading a file asynchronously with Node JS
 Using the database database.csv (provided in project description), create a function countStudents in the file 3-read_file_async.js
@@ -235,6 +245,7 @@ Using the database database.csv (provided in project description), create a func
  - It should log the number of students in each field, and the list with the following format: Number of students in    FIELD: 6. List: LIST_OF_FIRSTNAMES
  - CSV file can contain empty lines (at the end) - and they are not a valid student!
 
+```
 bob@dylan:~$ cat 3-main_0.js
 const countStudents = require('./3-read_file_async');
 
@@ -268,7 +279,8 @@ Number of students: 10
 Number of students in CS: 6. List: Johann, Arielle, Jonathan, Emmanuel, Guillaume, Katie
 Number of students in SWE: 4. List: Guillaume, Joseph, Paul, Tommy
 Done!
-bob@dylan:~$ 
+bob@dylan:~$
+```
 Tips:
 
 Using asynchronous callbacks is the preferred way to write code in Node to avoid blocking threads
@@ -282,17 +294,21 @@ In a file named 4-http.js, create a small HTTP server using the http module:
 
 #### In terminal 1:
 
+```
 bob@dylan:~$ node 4-http.js
 ...
+```
 
 #### In terminal 2:
 
+```
 bob@dylan:~$ curl localhost:1245 && echo ""
 Hello Holberton School!
 bob@dylan:~$ 
 bob@dylan:~$ curl localhost:1245/any_endpoint && echo ""
 Hello Holberton School!
-bob@dylan:~$ 
+bob@dylan:~$
+```
  
 #### 5. Create a more complex HTTP server using Node's HTTP module
 In a file named 5-http.js, create a small HTTP server using the http module:
@@ -306,11 +322,14 @@ In a file named 5-http.js, create a small HTTP server using the http module:
 
 #### Terminal 1:
 
+```
 bob@dylan:~$ node 5-http.js database.csv
 ...
+```
 
 #### In terminal 2:
 
+```
 bob@dylan:~$ curl localhost:1245 && echo ""
 Hello Holberton School!
 bob@dylan:~$ 
@@ -319,7 +338,8 @@ This is the list of our students
 Number of students: 10
 Number of students in CS: 6. List: Johann, Arielle, Jonathan, Emmanuel, Guillaume, Katie
 Number of students in SWE: 4. List: Guillaume, Joseph, Paul, Tommy
-bob@dylan:~$ 
+bob@dylan:~$
+```
  
 #### 6. Create a small HTTP server using Express
 Install Express and in a file named 6-http_express.js, create a small HTTP server using Express module:
@@ -330,11 +350,13 @@ Install Express and in a file named 6-http_express.js, create a small HTTP serve
 
 #### In terminal 1:
 
+```
 bob@dylan:~$ node 6-http_express.js
 ...
-
+```
 #### In terminal 2:
 
+```
 bob@dylan:~$ curl localhost:1245 && echo ""
 Hello Holberton School!
 bob@dylan:~$ 
@@ -349,7 +371,8 @@ bob@dylan:~$ curl localhost:1245/any_endpoint && echo ""
 <pre>Cannot GET /lskdlskd</pre>
 </body>
 </html> 
-bob@dylan:~$ 
+bob@dylan:~$
+```
  
 #### 7. Create a more complex HTTP server using Express
 In a file named 7-http_express.js, recreate the small HTTP server using Express:
@@ -363,11 +386,14 @@ In a file named 7-http_express.js, recreate the small HTTP server using Express:
 
 #### Terminal 1:
 
+```
 bob@dylan:~$ node 7-http_express.js database.csv
 ...
+```
 
 #### In terminal 2:
 
+```
 bob@dylan:~$ curl localhost:1245 && echo ""
 Hello Holberton School!
 bob@dylan:~$ 
@@ -376,7 +402,8 @@ This is the list of our students
 Number of students: 10
 Number of students in CS: 6. List: Johann, Arielle, Jonathan, Emmanuel, Guillaume, Katie
 Number of students in SWE: 4. List: Guillaume, Joseph, Paul, Tommy
-bob@dylan:~$ 
+bob@dylan:~$
+```
  
 #### 8. Organize a complex HTTP server using Express
 Obviously writing every part of a server within a single file is not sustainable. Let’s create a full server in a directory named full_server.
@@ -441,11 +468,14 @@ If you are starting node from outside of the folder full_server, you will have t
 
 #### In terminal 1:
 
+```
 bob@dylan:~$ npm run dev
 ...
+```
 
 #### In terminal 2:
 
+```
 bob@dylan:~$ curl localhost:1245 && echo ""
 Hello Holberton School!
 bob@dylan:~$ 
@@ -474,7 +504,8 @@ bob@dylan:~$ curl localhost:1245/students/French -vvv && echo ""
 <
 * Connection #0 to host localhost left intact
 Major parameter must be CS or SWE
-bob@dylan:~$ 
+bob@dylan:~$
+``` 
 If you want to add test to validate your integration, you will need to add this file: .babelrc
 
 Click to show/hide file contents
