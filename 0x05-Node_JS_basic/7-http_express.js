@@ -1,4 +1,3 @@
-
 const express = require('express');
 
 const { readFile } = require('fs');
@@ -62,4 +61,3 @@ app.listen(port, () => {
 });
 
 module.exports = app;
-
