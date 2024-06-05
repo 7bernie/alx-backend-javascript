@@ -108,6 +108,7 @@ module.exports = {
 ## .eslintrc.js
 Click to show/hide file contents
 
+```
 module.exports = {
   env: {
     browser: false,
@@ -145,6 +146,7 @@ module.exports = {
     }
   ]
 };
+```
 
 and…
 Don’t forget to run $ npm install when you have the package.json
